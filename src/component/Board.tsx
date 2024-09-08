@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   subTitle: {
-    color: '#7A972C',
+    color: '#000',
     textAlign: 'center',
     fontWeight: '600',
     fontSize: 24,
@@ -145,6 +145,6 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 22,
     fontWeight: '700',
-    color: '#FFBF34',
+    color: '#000',
   },
 });

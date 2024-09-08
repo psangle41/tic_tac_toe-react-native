@@ -11,6 +11,7 @@ const Square: React.FC<IProps> = props => {
   const {value, onSquareClick, disable} = props;
   return (
     <TouchableOpacity
+      activeOpacity={0.9}
       onPress={onSquareClick}
       style={styles.container}
       disabled={!!value || disable}>
