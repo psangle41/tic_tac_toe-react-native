@@ -12,7 +12,9 @@ This is a classic Tic-Tac-Toe game built with React Native.
 
 Check out a demo of the Tic-Tac-Toe game in action below:
 
-https://github.com/user-attachments/assets/64e102c9-f8c9-4290-b017-6cd2d89c827e
+https://github.com/user-attachments/assets/95098ec6-8f64-432f-800c-0290f008e51d
+
+
 
 
 
