@@ -9,6 +9,8 @@ function Board() {
 
   const winner = calculateWinner(squares);
 
+  const isDraw = squares.every(square => Boolean(square));
+
   const handleClick = (index: number) => {
     if (winner) {
       return;
@@ -31,12 +33,18 @@ function Board() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tic - Tac - Toe</Text>
-      {winner ? (
-        <Text style={styles.subTitle}>{`🎉 Winner is : ${winner}`}</Text>
+      {isDraw ? (
+        <Text style={styles.subTitle}>{"It's a draw 🙂"}</Text>
       ) : (
-        <Text style={styles.subTitle}>{`Next Player : ${
-          xIsNext ? 'X' : 'O'
-        }`}</Text>
+        <>
+          {winner ? (
+            <Text style={styles.subTitle}>{`🎉 Winner is : ${winner}`}</Text>
+          ) : (
+            <Text style={styles.subTitle}>{`Next Player : ${
+              xIsNext ? 'X' : 'O'
+            }`}</Text>
+          )}
+        </>
       )}
       <View style={styles.boardWrapper}>
         <View style={styles.boardRow}>
@@ -98,7 +106,9 @@ function Board() {
         style={styles.btn}
         onPress={resetGame}
         disabled={squares.every(square => !square)}>
-        <Text style={styles.btnText}>{winner ? 'Play Again' : 'Reset'}</Text>
+        <Text style={styles.btnText}>
+          {winner || isDraw ? 'Play Again' : 'Reset'}
+        </Text>
       </TouchableOpacity>
     </View>
   );
